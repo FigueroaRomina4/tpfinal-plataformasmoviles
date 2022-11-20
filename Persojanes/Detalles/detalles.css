@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(32, 35, 41);
+}
+
+@font-face {
+    font-family: myFirstFontFamily;
+    src: url(../../get-schwifty/get_schwifty.ttf);
+}
+
+@font-face {
+    font-family: mySecondFontFamily;
+    src: url(../../get-schwifty/MISFITS_.TTF);
+}
+
+.font-rick{
+    font-family: myFirstFontFamily;
+}
+
+.font-similar{
+    font-family: mySecondFontFamily;
+}
+
+h1{
+    font-size: 50px;
+}
+
+
+.row-clor{
+    background-color: rgb(60, 62, 68);
+    border:rgb(119, 255, 78) 2px solid;
+} 
+
+.list-group-item{
+    background-color: rgb(60, 62, 68);
+}
+
+
+
+a{
+    font-weight: 480;
+    color: rgb(223, 221, 221);
+}
+
+a:hover{
+    color: rgb(255, 252, 64);
+}
+
+.scanner span {
+    color: transparent;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+}
+  
+.scanner span::before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 4px solid rgb(119, 255, 78);
+    overflow: hidden;
+    color: rgb(119, 255, 78);
+    animation: load91371 2s linear infinite;
+}
+  
+@keyframes load91371 {
+    0%, 10%, 100% {
+      width: 0;
+}
+  
+    10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+      border-right-color: transparent;
+    }
+  
+    11%,21%,31%,41%,51%,61%,71%,81%,91% {
+      border-right-color: rgb(119, 255, 78);
+    }
+  
+    60%, 80% {
+      width: 100%;
+    }
+}
+
+footer{
+    background-color: rgb(10, 9, 9);    
+}

@@ -1,0 +1,130 @@
+body{
+    background-color:rgb(32, 35, 41);
+    
+}
+
+@font-face {
+    font-family: myFirstFontFamily;
+    src: url(../get-schwifty/get_schwifty.ttf);
+}
+
+@font-face {
+    font-family: mySecondFontFamily;
+    src: url(../get-schwifty/MISFITS_.TTF);
+}
+
+.font-rick{
+    font-family: myFirstFontFamily;
+}
+
+.font-similar{
+    font-family: mySecondFontFamily;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.card {
+    --border-radius: 15px;
+    --border-width: 4px;
+    border: 0;
+    background: rgb(5, 5, 22);
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 15px;
+}
+   
+.card::after {
+    cursor: pointer;
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+   
+.card:hover::after {
+    animation-play-state: running;
+}
+   
+@keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+}
+   
+.card,.card::after {
+    box-sizing: border-box;
+}
+   
+.card:active {
+    --border-width: 5px;
+}
+
+.scanner span {
+    color: transparent;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+}
+  
+.scanner span::before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 4px solid #e440bb;
+    overflow: hidden;
+    color: #e440bb;
+    animation: load91371 2s linear infinite;
+}
+  
+@keyframes load91371 {
+    0%, 10%, 100% {
+      width: 0;
+}
+  
+    10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+      border-right-color: transparent;
+    }
+  
+    11%,21%,31%,41%,51%,61%,71%,81%,91% {
+      border-right-color: #e440bb;
+    }
+  
+    60%, 80% {
+      width: 100%;
+    }
+}
+
+footer{
+    background-color: rgb(10, 9, 9);    
+}

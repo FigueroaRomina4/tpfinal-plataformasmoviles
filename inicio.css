@@ -1,0 +1,21 @@
+@font-face {
+    font-family: myFirstFontFamily;
+    src: url(get-schwifty/get_schwifty.ttf);
+}
+
+@font-face {
+    font-family: mySecondFontFamily;
+    src: url(get-schwifty/MISFITS_.TTF);
+}
+
+.font-rick{
+    font-family: myFirstFontFamily;
+}
+
+.font-similar{
+    font-family: mySecondFontFamily;
+}
+
+footer{
+    background-color: rgb(10, 9, 9);    
+}
